@@ -57,9 +57,10 @@ address {
 }
 
 .container {
-  width: 1200px;
+  width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid tomato;
 }
 
 .list {
@@ -72,12 +73,21 @@ address {
 /* HEADER */
 .header {
 }
+.header-nav,
+.header-list {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
 .header-logo {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   color: #000000;
+  display: block;
+  margin-right: 93px;
 }
 
 .logo-text {
@@ -88,29 +98,38 @@ address {
   color: var(--accent-color);
 }
 
-.haeder-link.current {
+.header-list .header-item {
+  margin-left: 50px;
+}
+
+.header-link.current {
   color: var(--accent-color);
 }
 
-.haeder-link,
-.haeder-contact {
+.header-link,
+.header-contact {
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--main-title-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.haeder-item {
+.header-item {
 }
-.haeder-link:hover,
-.haeder-link:focus,
-.haeder-contact:hover,
-.haeder-contact:focus {
+.header-link:hover,
+.header-link:focus,
+.header-contact:hover,
+.aaeder-contact:focus {
   color: var(--accent-color);
 }
-.haeder-list {
+
+.header-link {
 }
-.haeder-contact {
+
+.header-contact {
   color: var(--second-color);
 }
 
@@ -118,14 +137,20 @@ address {
 .hero {
   background-color: #2f303a;
   font-family: var(--second-font);
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .hero-title {
+  display: flex;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 696px;
+  justify-content: center;
+  margin-bottom: 30px;
   color: var(--main-color);
 }
 
@@ -137,6 +162,9 @@ address {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
   color: var(--main-color);
   background-color: var(--accent-color);
 }
@@ -160,33 +188,53 @@ address {
   margin: -1px;
 }
 
+.work-con {
+  display: flex;
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
 .work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-item {
+  width: 270px;
+  margin: 15px;
 }
 
 .work-title {
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .work-text {
   line-height: calc(24 / 14);
   color: var(--second-color);
+  width: 270px;
 }
 
 /* ABOUT */
 
 .about {
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .section-title {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
+  margin-bottom: 50px;
 }
 .about-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .about-item {
@@ -195,12 +243,21 @@ address {
 /* TEAM */
 
 .team {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.section-title {
+  margin-bottom: 50px;
 }
 
 .team-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .team-item {
+  margin-bottom: 30px;
 }
 .team-name {
   font-weight: 500;
@@ -208,6 +265,7 @@ address {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--main-title-color);
+  margin-bottom: 10px;
 }
 .team-position {
   font-size: 16px;
@@ -219,10 +277,14 @@ address {
 /* MENU */
 .menu {
   font-family: var(--second-font);
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .visually-hidden {
 }
 .menu-list {
+  display: flex;
+  justify-content: center;
 }
 
 .menu-item {
@@ -235,6 +297,9 @@ address {
   line-height: calc(26 / 16);
   text-align: center;
   color: var(--main-title-color);
+  border-radius: 4px;
+  gap: 8px;
+  border-color: transparent;
 }
 .btn:hover,
 .btn.focus {
@@ -250,11 +315,25 @@ address {
 .visually-hidden {
 }
 .project-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 .list {
 }
 .project-item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
+
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.project-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 .project-link {
 }
 .link {
