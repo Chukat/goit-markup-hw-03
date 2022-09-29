@@ -57,10 +57,14 @@ address {
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   outline: 1px solid tomato;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .list {
@@ -72,12 +76,17 @@ address {
 
 /* HEADER */
 .header {
+  border-bottom: 1px solid #ececec;
 }
+
+.header-container,
 .header-nav,
 .header-list {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
+}
+.header-nav {
+  margin-right: 240px;
 }
 
 .header-logo {
@@ -102,8 +111,12 @@ address {
   margin-left: 50px;
 }
 
-.header-link.current {
+.header-link .current {
   color: var(--accent-color);
+}
+
+.header-list .header-contact {
+  justify-content: flex-end;
 }
 
 .header-link,
@@ -137,8 +150,9 @@ address {
 .hero {
   background-color: #2f303a;
   font-family: var(--second-font);
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 200px;
+  padding-top: 200px;
+  text-align: center;
 }
 .hero-title {
   display: flex;
@@ -151,6 +165,8 @@ address {
   width: 696px;
   justify-content: center;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--main-color);
 }
 
@@ -158,13 +174,12 @@ address {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  display: flex;
-  align-items: center;
-  text-align: center;
+
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 32px;
+  border: 0;
   color: var(--main-color);
   background-color: var(--accent-color);
 }
@@ -188,23 +203,14 @@ address {
   margin: -1px;
 }
 
-.work-con {
-  display: flex;
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 30px;
 }
 
 .work-item {
   width: 270px;
-  margin: 15px;
 }
 
 .work-title {
@@ -223,8 +229,7 @@ address {
 /* ABOUT */
 
 .about {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-top: 0px;
 }
 .section-title {
   font-size: 36px;
@@ -243,8 +248,7 @@ address {
 /* TEAM */
 
 .team {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  background: #f5f4fa;
 }
 
 .section-title {
@@ -258,7 +262,17 @@ address {
 
 .team-item {
   margin-bottom: 30px;
+  background: var(--main-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
+
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-name {
   font-weight: 500;
   font-size: 16px;
@@ -277,17 +291,17 @@ address {
 /* MENU */
 .menu {
   font-family: var(--second-font);
-  padding-bottom: 94px;
-  padding-top: 94px;
 }
 .visually-hidden {
 }
 .menu-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
-.menu-item {
+.menu-item:not(:last-child) {
+  margin-right: 9px;
 }
 .menu-btn {
   cursor: pointer;
@@ -300,6 +314,8 @@ address {
   border-radius: 4px;
   gap: 8px;
   border-color: transparent;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .btn:hover,
 .btn.focus {
@@ -324,6 +340,7 @@ address {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+  border: 1px solid #eeeeee;
 }
 
 .project-item:nth-child(3n) {
@@ -338,6 +355,12 @@ address {
 }
 .link {
 }
+
+.project-desc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .project-title {
   font-size: 18px;
   line-height: calc(36 / 18);
@@ -354,13 +377,17 @@ address {
 
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 26px;
+  display: block;
   line-height: calc(31 / 26);
   color: var(--main-color);
+  margin-bottom: 20px;
 }
 .footer-text {
   font-family: var(--main-font);
@@ -374,6 +401,8 @@ address {
   font-style: normal;
 }
 .footer-list {
+  flex-direction: column;
+  gap: 9px;
 }
 
 .footer-item {

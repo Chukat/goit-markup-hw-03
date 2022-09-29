@@ -26,7 +26,7 @@
 
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="header-nav">
           <a class="header-logo link" href="./index.html"
             ><span class="logo-text">Web</span>Studio</a
@@ -45,33 +45,31 @@
           </ul>
         </nav>
 
-        <div class="contact">
-          <ul class="header-list list">
-            <li class="header-item">
-              <a class="header-contact link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="header-item">
-              <a class="haeder-contact link" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
+        <ul class="header-list list">
+          <li class="header-item">
+            <a class="header-contact link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="header-item">
+            <a class="haeder-contact link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
           <button class="hero-btn btn" type="button">Замовити послугу</button>
         </div>
       </section>
 
-      <section class="work">
-        <div class="container work-con">
+      <section class="work section">
+        <div class="container">
           <!-- Скрыть тег h2-->
           <h2 class="visually-hidden">Переваги</h2>
           <ul class="work-list list">
@@ -106,7 +104,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about section">
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="about-list list">
@@ -138,7 +136,7 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="team section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
@@ -149,8 +147,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Ігор Дем'яненко</h3>
-              <p class="team-position" lang="en">Product Designer</p>
+              <div class="team-text">
+                <h3 class="team-name">Ігор Дем'яненко</h3>
+                <p class="team-position" lang="en">Product Designer</p>
+              </div>
             </li>
             <li class="team-item">
               <img
@@ -159,8 +159,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Ольга Рєпіна</h3>
-              <p class="team-position" lang="en">Frontend Developer</p>
+              <div class="team-text">
+                <h3 class="team-name">Ольга Рєпіна</h3>
+                <p class="team-position" lang="en">Frontend Developer</p>
+              </div>
             </li>
             <li class="team-item">
               <img
@@ -169,8 +171,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Микола Тарасов</h3>
-              <p class="team-position" lang="en">Marketing</p>
+              <div class="team-text">
+                <h3 class="team-name">Микола Тарасов</h3>
+                <p class="team-position" lang="en">Marketing</p>
+              </div>
             </li>
             <li class="team-item">
               <img
@@ -179,8 +183,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Михайло Єрмаков</h3>
-              <p class="team-position" lang="en">UI Designer</p>
+              <div class="team-text">
+                <h3 class="team-name">Михайло Єрмаков</h3>
+                <p class="team-position" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
